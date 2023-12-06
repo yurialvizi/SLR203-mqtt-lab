@@ -1,0 +1,18 @@
+2023-11-29 14:27:52,869 INFO  [MqttSpyDaemon                 ]  - #######################################################
+2023-11-29 14:27:52,871 INFO  [MqttSpyDaemon                 ]  - ### Starting mqtt-spy-daemon v1.0.0 (build 3)
+2023-11-29 14:27:52,871 INFO  [MqttSpyDaemon                 ]  - ### If you find it useful, see how you can help at http://kamilfb.github.io/mqtt-spy/
+2023-11-29 14:27:52,871 INFO  [MqttSpyDaemon                 ]  - ### To get release updates follow @mqtt_spy on Twitter 
+2023-11-29 14:27:52,871 INFO  [MqttSpyDaemon                 ]  - #######################################################
+2023-11-29 14:27:52,871 WARN  [Main                          ]  - !!! Using sample configuration for localhost - to use your own configuration file, specify its location as a parameter !!!
+2023-11-29 14:27:52,883 INFO  [MqttSpyDaemonConfigLoader     ]  - Client ID is empty and protocol version is not 3.1.1, so going to generate one...
+2023-11-29 14:27:52,888 INFO  [MqttSpyDaemonConfigLoader     ]  - Generated Client ID is mqttspy142752888
+2023-11-29 14:27:52,891 INFO  [MqttConfigurationUtils        ]  - Auto-complete for server URI (localhost -> tcp://localhost)
+2023-11-29 14:27:52,938 INFO  [SimpleMqttConnection          ]  - Successfully connected to mqttspy142752888@tcp://localhost
+2023-11-29 14:27:52,941 INFO  [BaseMqttConnection            ]  - Subscribed to mqtt-spy-daemon/#
+2023-11-29 14:27:53,180 INFO  [BaseScriptManager             ]  - Adding script sample-publish at /sample-publish.js
+2023-11-29 14:27:53,180 INFO  [BaseDaemon                    ]  - About to start background script sample-publish
+2023-11-29 14:27:53,281 INFO  [SimpleMqttConnection          ]  - Publishing message on topic "mqtt-spy-daemon/test1". Payload size = 5
+2023-11-29 14:27:53,283 INFO  [SimpleMqttConnection          ]  - Publishing message on topic "mqtt-spy-daemon/test2". Payload size = 4
+2023-11-29 14:27:53,284 INFO  [SimpleMqttConnection          ]  - Publishing message on topic "mqtt-spy-daemon/test3". Payload size = 16
+2023-11-29 14:27:54,184 INFO  [BaseMqttConnection            ]  - Client mqttspy142752888 disconnected
+2023-11-29 14:27:55,186 INFO  [BaseDaemon                    ]  - All tasks completed - bye bye...
