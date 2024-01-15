@@ -8,8 +8,8 @@ public class SubscribingMqttClient implements MqttCallback {
         String topic        = "labs/paho-example-topic";
         String brokerURI    = "tcp://localhost:1883";
         String clientId     = "myClientID_Sub";
-        int qos             = 1;
-        boolean cleanSession = true;
+        int qos             = 0;
+        boolean cleanSession = false;
         boolean retain = true;
 
         // instantiate a synchronous MQTT Client to connect to the targeted Mqtt Broker

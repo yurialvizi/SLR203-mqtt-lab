@@ -2951,3 +2951,813 @@ WillDestination             :  null
 2023-12-04 11:38:14,782 INFO  [JavaFX Application Thread     ] [MqttConnectionWithReconnection]  - Disconnecting mqtt-spy from [tcp://127.0.0.1]
 2023-12-04 11:38:14,802 INFO  [MQTT Disc: mqtt-spy           ] [MqttDisconnectionResultHandler]  - mqtt-spy@localhost disconnected
 2023-12-04 11:38:16,166 INFO  [JavaFX Application Thread     ] [MqttConnectionWithReconnection]  - Disconnecting mqtt-spy from [tcp://127.0.0.1]
+2023-12-06 16:28:02,382 INFO  [JavaFX Application Thread     ] [MqttViewManager               ]  - Default configuration file present (/home/yuri/mqtt-spy/mqtt-spy-configuration.xml) = true
+2023-12-06 16:28:02,391 INFO  [JavaFX Application Thread     ] [MqttViewManager               ]  - Loading configuration file from /home/yuri/mqtt-spy/mqtt-spy-configuration.xml
+2023-12-06 16:28:07,124 ERROR [JavaFX Application Thread     ] [ControlPanelController        ]  - Cannot retrieve version info
+pl.baczkowicz.spy.exceptions.XMLException: Cannot read version info from http://baczkowicz.pl/mqtt-spy/version_0_6_0.xml?current=1.0.0-3
+	at pl.baczkowicz.spy.ui.versions.VersionManager.loadVersions(VersionManager.java:102)
+	at pl.baczkowicz.spy.ui.controllers.ControlPanelController$2.run(ControlPanelController.java:203)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.net.UnknownHostException: baczkowicz.pl
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:196)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at java.net.Socket.connect(Socket.java:555)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:180)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:499)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:594)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:278)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:375)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:393)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1240)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1167)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1061)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:995)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1584)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1512)
+	at java.net.URL.openStream(URL.java:1092)
+	at pl.baczkowicz.spy.ui.versions.VersionManager.loadVersions(VersionManager.java:94)
+	... 2 more
+2023-12-06 16:29:03,785 INFO  [JavaFX Application Thread     ] [MqttConfigurationUtils        ]  - Auto-complete for server URI (127.0.0.1 -> tcp://127.0.0.1)
+2023-12-06 16:29:04,414 INFO  [JavaFX Application Thread     ] [NewSubscriptionController     ]  - Subscribing to /mqtt-spy/test/
+2023-12-06 16:29:04,415 INFO  [JavaFX Application Thread     ] [MqttSubscriptionViewManager   ]  - Creating subscription for /mqtt-spy/test/
+2023-12-06 16:29:04,915 INFO  [mqtt-spy [ConnectionRunnable for mqtt-spy@localhost]] [MqttAsyncConnectionRunnable   ]  - Connecting client ID [mqtt-spy] to server [[tcp://127.0.0.1]]; options = 
+============== Connection options ==============
+CleanSession                :  true
+SocketFactory               :  null
+MqttVersion                 :  0
+KeepAliveInterval           :  70
+ConTimeout                  :  30
+UserName                    :  null
+SSLProperties               :  null
+WillDestination             :  null
+==========================================
+
+2023-12-06 16:29:04,936 INFO  [MQTT Call: mqtt-spy           ] [MqttConnectionResultHandler   ]  - mqtt-spy@localhost connected
+2023-12-06 16:29:04,967 INFO  [JavaFX Application Thread     ] [MqttEventHandler              ]  - About to resubscribe to all requested topics
+2023-12-06 16:29:55,166 INFO  [JavaFX Application Thread     ] [NewSubscriptionController     ]  - Subscribing to labs/paho-example-topic
+2023-12-06 16:29:55,167 INFO  [JavaFX Application Thread     ] [MqttSubscriptionViewManager   ]  - Creating subscription for labs/paho-example-topic
+2023-12-06 16:29:55,244 INFO  [JavaFX Application Thread     ] [BaseMqttConnection            ]  - Subscribed to labs/paho-example-topic
+2023-12-06 20:07:19,734 ERROR [MQTT Ping: mqtt-spy           ] [MqttCallbackHandler           ]  - Connection mqtt-spy@localhost lost
+Timed out while waiting to write messages to the server (32002)
+	at org.eclipse.paho.client.mqttv3.internal.ExceptionHelper.createMqttException(ExceptionHelper.java:31)
+	at org.eclipse.paho.client.mqttv3.internal.ClientState.checkForActivity(ClientState.java:672)
+	at org.eclipse.paho.client.mqttv3.internal.ClientComms.checkForActivity(ClientComms.java:732)
+	at org.eclipse.paho.client.mqttv3.internal.ClientComms.checkForActivity(ClientComms.java:718)
+	at org.eclipse.paho.client.mqttv3.TimerPingSender$PingTask.run(TimerPingSender.java:77)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+2023-12-06 20:07:19,742 WARN  [JavaFX Application Thread     ] [BaseMqttConnection            ]  - Client not connected
+2023-12-06 20:07:19,742 INFO  [JavaFX Application Thread     ] [BaseMqttConnection            ]  - Successfully unsubscribed from labs/paho-example-topic
+2023-12-06 20:23:22,264 INFO  [JavaFX Application Thread     ] [MqttConnectionWithReconnection]  - Disconnecting mqtt-spy from [tcp://127.0.0.1]
+2023-12-20 12:39:23,565 INFO  [JavaFX Application Thread     ] [MqttViewManager               ]  - Default configuration file present (/home/yuri/mqtt-spy/mqtt-spy-configuration.xml) = true
+2023-12-20 12:39:23,581 INFO  [JavaFX Application Thread     ] [MqttViewManager               ]  - Loading configuration file from /home/yuri/mqtt-spy/mqtt-spy-configuration.xml
+2023-12-20 12:39:28,333 ERROR [JavaFX Application Thread     ] [ControlPanelController        ]  - Cannot retrieve version info
+pl.baczkowicz.spy.exceptions.XMLException: Cannot read version info from http://baczkowicz.pl/mqtt-spy/version_0_6_0.xml?current=1.0.0-3
+	at pl.baczkowicz.spy.ui.versions.VersionManager.loadVersions(VersionManager.java:102)
+	at pl.baczkowicz.spy.ui.controllers.ControlPanelController$2.run(ControlPanelController.java:203)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.net.UnknownHostException: baczkowicz.pl
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:196)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at java.net.Socket.connect(Socket.java:555)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:180)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:499)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:594)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:278)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:375)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:393)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1240)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1167)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1061)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:995)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1584)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1512)
+	at java.net.URL.openStream(URL.java:1092)
+	at pl.baczkowicz.spy.ui.versions.VersionManager.loadVersions(VersionManager.java:94)
+	... 2 more
+2023-12-20 12:39:44,326 INFO  [JavaFX Application Thread     ] [MqttViewManager               ]  - Default configuration file present (/home/yuri/mqtt-spy/mqtt-spy-configuration.xml) = true
+2023-12-20 12:39:44,338 INFO  [JavaFX Application Thread     ] [MqttViewManager               ]  - Loading configuration file from /home/yuri/mqtt-spy/mqtt-spy-configuration.xml
+2023-12-20 12:39:48,735 INFO  [JavaFX Application Thread     ] [MqttConfigurationUtils        ]  - Auto-complete for server URI (127.0.0.1 -> tcp://127.0.0.1)
+2023-12-20 12:39:49,048 ERROR [JavaFX Application Thread     ] [ControlPanelController        ]  - Cannot retrieve version info
+pl.baczkowicz.spy.exceptions.XMLException: Cannot read version info from http://baczkowicz.pl/mqtt-spy/version_0_6_0.xml?current=1.0.0-3
+	at pl.baczkowicz.spy.ui.versions.VersionManager.loadVersions(VersionManager.java:102)
+	at pl.baczkowicz.spy.ui.controllers.ControlPanelController$2.run(ControlPanelController.java:203)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.net.UnknownHostException: baczkowicz.pl
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:196)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at java.net.Socket.connect(Socket.java:555)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:180)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:499)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:594)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:278)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:375)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:393)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1240)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1167)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1061)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:995)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1584)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1512)
+	at java.net.URL.openStream(URL.java:1092)
+	at pl.baczkowicz.spy.ui.versions.VersionManager.loadVersions(VersionManager.java:94)
+	... 2 more
+2023-12-20 12:39:49,374 INFO  [JavaFX Application Thread     ] [NewSubscriptionController     ]  - Subscribing to /mqtt-spy/test/
+2023-12-20 12:39:49,374 INFO  [JavaFX Application Thread     ] [MqttSubscriptionViewManager   ]  - Creating subscription for /mqtt-spy/test/
+2023-12-20 12:39:49,876 INFO  [mqtt-spy [ConnectionRunnable for mqtt-spy@localhost]] [MqttAsyncConnectionRunnable   ]  - Connecting client ID [mqtt-spy] to server [[tcp://127.0.0.1]]; options = 
+============== Connection options ==============
+CleanSession                :  true
+SocketFactory               :  null
+MqttVersion                 :  0
+KeepAliveInterval           :  70
+ConTimeout                  :  30
+UserName                    :  null
+SSLProperties               :  null
+WillDestination             :  null
+==========================================
+
+2023-12-20 12:39:49,884 WARN  [MQTT Con: mqtt-spy            ] [MqttConnectionResultHandler   ]  - Connecting to mqtt-spy@localhost failed
+Não é possível se conectar ao servidor (32103) - java.net.ConnectException: Conexão recusada (Connection refused)
+	at org.eclipse.paho.client.mqttv3.internal.TCPNetworkModule.start(TCPNetworkModule.java:79)
+	at org.eclipse.paho.client.mqttv3.internal.ClientComms$ConnectBG.run(ClientComms.java:650)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.net.ConnectException: Conexão recusada (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at org.eclipse.paho.client.mqttv3.internal.TCPNetworkModule.start(TCPNetworkModule.java:70)
+	... 2 more
+2023-12-20 12:45:06,940 INFO  [JavaFX Application Thread     ] [MqttViewManager               ]  - Default configuration file present (/home/yuri/mqtt-spy/mqtt-spy-configuration.xml) = true
+2023-12-20 12:45:06,950 INFO  [JavaFX Application Thread     ] [MqttViewManager               ]  - Loading configuration file from /home/yuri/mqtt-spy/mqtt-spy-configuration.xml
+2023-12-20 12:45:10,638 INFO  [JavaFX Application Thread     ] [MqttConfigurationUtils        ]  - Auto-complete for server URI (127.0.0.1 -> tcp://127.0.0.1)
+2023-12-20 12:45:11,219 INFO  [JavaFX Application Thread     ] [NewSubscriptionController     ]  - Subscribing to /mqtt-spy/test/
+2023-12-20 12:45:11,219 INFO  [JavaFX Application Thread     ] [MqttSubscriptionViewManager   ]  - Creating subscription for /mqtt-spy/test/
+2023-12-20 12:45:11,720 INFO  [mqtt-spy [ConnectionRunnable for mqtt-spy@localhost]] [MqttAsyncConnectionRunnable   ]  - Connecting client ID [mqtt-spy] to server [[tcp://127.0.0.1]]; options = 
+============== Connection options ==============
+CleanSession                :  true
+SocketFactory               :  null
+MqttVersion                 :  0
+KeepAliveInterval           :  70
+ConTimeout                  :  30
+UserName                    :  null
+SSLProperties               :  null
+WillDestination             :  null
+==========================================
+
+2023-12-20 12:45:11,778 ERROR [JavaFX Application Thread     ] [ControlPanelController        ]  - Cannot retrieve version info
+pl.baczkowicz.spy.exceptions.XMLException: Cannot read version info from http://baczkowicz.pl/mqtt-spy/version_0_6_0.xml?current=1.0.0-3
+	at pl.baczkowicz.spy.ui.versions.VersionManager.loadVersions(VersionManager.java:102)
+	at pl.baczkowicz.spy.ui.controllers.ControlPanelController$2.run(ControlPanelController.java:203)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.net.UnknownHostException: baczkowicz.pl
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:196)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at java.net.Socket.connect(Socket.java:555)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:180)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:499)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:594)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:278)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:375)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:393)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1240)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1167)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1061)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:995)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1584)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1512)
+	at java.net.URL.openStream(URL.java:1092)
+	at pl.baczkowicz.spy.ui.versions.VersionManager.loadVersions(VersionManager.java:94)
+	... 2 more
+2023-12-20 12:45:11,826 INFO  [MQTT Call: mqtt-spy           ] [MqttConnectionResultHandler   ]  - mqtt-spy@localhost connected
+2023-12-20 12:45:11,835 INFO  [JavaFX Application Thread     ] [MqttEventHandler              ]  - About to resubscribe to all requested topics
+2023-12-20 12:45:26,428 INFO  [JavaFX Application Thread     ] [MqttConnectionWithReconnection]  - Disconnecting mqtt-spy from [tcp://127.0.0.1]
+2023-12-20 12:45:26,446 INFO  [MQTT Disc: mqtt-spy           ] [MqttDisconnectionResultHandler]  - mqtt-spy@localhost disconnected
+2023-12-20 12:45:36,459 INFO  [JavaFX Application Thread     ] [MqttViewManager               ]  - Default configuration file present (/home/yuri/mqtt-spy/mqtt-spy-configuration.xml) = true
+2023-12-20 12:45:36,469 INFO  [JavaFX Application Thread     ] [MqttViewManager               ]  - Loading configuration file from /home/yuri/mqtt-spy/mqtt-spy-configuration.xml
+2023-12-20 12:45:38,618 INFO  [JavaFX Application Thread     ] [MqttConfigurationUtils        ]  - Auto-complete for server URI (127.0.0.1 -> tcp://127.0.0.1)
+2023-12-20 12:45:39,207 INFO  [JavaFX Application Thread     ] [NewSubscriptionController     ]  - Subscribing to /mqtt-spy/test/
+2023-12-20 12:45:39,208 INFO  [JavaFX Application Thread     ] [MqttSubscriptionViewManager   ]  - Creating subscription for /mqtt-spy/test/
+2023-12-20 12:45:39,709 INFO  [mqtt-spy [ConnectionRunnable for mqtt-spy@localhost]] [MqttAsyncConnectionRunnable   ]  - Connecting client ID [mqtt-spy] to server [[tcp://127.0.0.1]]; options = 
+============== Connection options ==============
+CleanSession                :  true
+SocketFactory               :  null
+MqttVersion                 :  0
+KeepAliveInterval           :  70
+ConTimeout                  :  30
+UserName                    :  null
+SSLProperties               :  null
+WillDestination             :  null
+==========================================
+
+2023-12-20 12:45:39,753 INFO  [MQTT Call: mqtt-spy           ] [MqttConnectionResultHandler   ]  - mqtt-spy@localhost connected
+2023-12-20 12:45:39,756 INFO  [JavaFX Application Thread     ] [MqttEventHandler              ]  - About to resubscribe to all requested topics
+2023-12-20 12:45:41,189 ERROR [JavaFX Application Thread     ] [ControlPanelController        ]  - Cannot retrieve version info
+pl.baczkowicz.spy.exceptions.XMLException: Cannot read version info from http://baczkowicz.pl/mqtt-spy/version_0_6_0.xml?current=1.0.0-3
+	at pl.baczkowicz.spy.ui.versions.VersionManager.loadVersions(VersionManager.java:102)
+	at pl.baczkowicz.spy.ui.controllers.ControlPanelController$2.run(ControlPanelController.java:203)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.net.UnknownHostException: baczkowicz.pl
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:196)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at java.net.Socket.connect(Socket.java:555)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:180)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:499)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:594)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:278)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:375)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:393)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1240)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1167)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1061)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:995)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1584)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1512)
+	at java.net.URL.openStream(URL.java:1092)
+	at pl.baczkowicz.spy.ui.versions.VersionManager.loadVersions(VersionManager.java:94)
+	... 2 more
+2023-12-20 13:32:38,879 ERROR [MQTT Ping: mqtt-spy           ] [MqttCallbackHandler           ]  - Connection mqtt-spy@localhost lost
+Timed out while waiting to write messages to the server (32002)
+	at org.eclipse.paho.client.mqttv3.internal.ExceptionHelper.createMqttException(ExceptionHelper.java:31)
+	at org.eclipse.paho.client.mqttv3.internal.ClientState.checkForActivity(ClientState.java:672)
+	at org.eclipse.paho.client.mqttv3.internal.ClientComms.checkForActivity(ClientComms.java:732)
+	at org.eclipse.paho.client.mqttv3.internal.ClientComms.checkForActivity(ClientComms.java:718)
+	at org.eclipse.paho.client.mqttv3.TimerPingSender$PingTask.run(TimerPingSender.java:77)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+2023-12-20 13:34:38,004 INFO  [JavaFX Application Thread     ] [MqttViewManager               ]  - Default configuration file present (/home/yuri/mqtt-spy/mqtt-spy-configuration.xml) = true
+2023-12-20 13:34:38,015 INFO  [JavaFX Application Thread     ] [MqttViewManager               ]  - Loading configuration file from /home/yuri/mqtt-spy/mqtt-spy-configuration.xml
+2023-12-20 13:34:46,042 INFO  [JavaFX Application Thread     ] [MqttViewManager               ]  - Default configuration file present (/home/yuri/mqtt-spy/mqtt-spy-configuration.xml) = true
+2023-12-20 13:34:46,052 INFO  [JavaFX Application Thread     ] [MqttViewManager               ]  - Loading configuration file from /home/yuri/mqtt-spy/mqtt-spy-configuration.xml
+2023-12-20 13:34:48,121 INFO  [JavaFX Application Thread     ] [MqttConfigurationUtils        ]  - Auto-complete for server URI (127.0.0.1 -> tcp://127.0.0.1)
+2023-12-20 13:34:48,688 INFO  [JavaFX Application Thread     ] [NewSubscriptionController     ]  - Subscribing to /mqtt-spy/test/
+2023-12-20 13:34:48,688 INFO  [JavaFX Application Thread     ] [MqttSubscriptionViewManager   ]  - Creating subscription for /mqtt-spy/test/
+2023-12-20 13:34:49,189 INFO  [mqtt-spy [ConnectionRunnable for mqtt-spy@localhost]] [MqttAsyncConnectionRunnable   ]  - Connecting client ID [mqtt-spy] to server [[tcp://127.0.0.1]]; options = 
+============== Connection options ==============
+CleanSession                :  true
+SocketFactory               :  null
+MqttVersion                 :  0
+KeepAliveInterval           :  70
+ConTimeout                  :  30
+UserName                    :  null
+SSLProperties               :  null
+WillDestination             :  null
+==========================================
+
+2023-12-20 13:34:49,223 INFO  [MQTT Call: mqtt-spy           ] [MqttConnectionResultHandler   ]  - mqtt-spy@localhost connected
+2023-12-20 13:34:49,224 INFO  [JavaFX Application Thread     ] [MqttEventHandler              ]  - About to resubscribe to all requested topics
+2023-12-20 13:34:50,814 ERROR [JavaFX Application Thread     ] [ControlPanelController        ]  - Cannot retrieve version info
+pl.baczkowicz.spy.exceptions.XMLException: Cannot read version info from http://baczkowicz.pl/mqtt-spy/version_0_6_0.xml?current=1.0.0-3
+	at pl.baczkowicz.spy.ui.versions.VersionManager.loadVersions(VersionManager.java:102)
+	at pl.baczkowicz.spy.ui.controllers.ControlPanelController$2.run(ControlPanelController.java:203)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.net.UnknownHostException: baczkowicz.pl
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:196)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at java.net.Socket.connect(Socket.java:555)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:180)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:499)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:594)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:278)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:375)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:393)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1240)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1167)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1061)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:995)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1584)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1512)
+	at java.net.URL.openStream(URL.java:1092)
+	at pl.baczkowicz.spy.ui.versions.VersionManager.loadVersions(VersionManager.java:94)
+	... 2 more
+2023-12-20 13:59:30,153 ERROR [MQTT Ping: mqtt-spy           ] [MqttCallbackHandler           ]  - Connection mqtt-spy@localhost lost
+Timed out while waiting to write messages to the server (32002)
+	at org.eclipse.paho.client.mqttv3.internal.ExceptionHelper.createMqttException(ExceptionHelper.java:31)
+	at org.eclipse.paho.client.mqttv3.internal.ClientState.checkForActivity(ClientState.java:672)
+	at org.eclipse.paho.client.mqttv3.internal.ClientComms.checkForActivity(ClientComms.java:732)
+	at org.eclipse.paho.client.mqttv3.internal.ClientComms.checkForActivity(ClientComms.java:718)
+	at org.eclipse.paho.client.mqttv3.TimerPingSender$PingTask.run(TimerPingSender.java:77)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+2024-01-12 15:50:17,550 INFO  [JavaFX Application Thread     ] [MqttViewManager               ]  - Default configuration file present (/home/yuri/mqtt-spy/mqtt-spy-configuration.xml) = true
+2024-01-12 15:50:17,563 INFO  [JavaFX Application Thread     ] [MqttViewManager               ]  - Loading configuration file from /home/yuri/mqtt-spy/mqtt-spy-configuration.xml
+2024-01-12 15:50:22,335 ERROR [JavaFX Application Thread     ] [ControlPanelController        ]  - Cannot retrieve version info
+pl.baczkowicz.spy.exceptions.XMLException: Cannot read version info from http://baczkowicz.pl/mqtt-spy/version_0_6_0.xml?current=1.0.0-3
+	at pl.baczkowicz.spy.ui.versions.VersionManager.loadVersions(VersionManager.java:102)
+	at pl.baczkowicz.spy.ui.controllers.ControlPanelController$2.run(ControlPanelController.java:203)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.net.UnknownHostException: baczkowicz.pl
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:196)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at java.net.Socket.connect(Socket.java:555)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:180)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:499)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:594)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:278)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:375)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:393)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1240)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1167)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1061)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:995)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1584)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1512)
+	at java.net.URL.openStream(URL.java:1092)
+	at pl.baczkowicz.spy.ui.versions.VersionManager.loadVersions(VersionManager.java:94)
+	... 2 more
+2024-01-12 15:50:38,888 INFO  [JavaFX Application Thread     ] [MqttConfigurationUtils        ]  - Auto-complete for server URI (127.0.0.1 -> tcp://127.0.0.1)
+2024-01-12 15:50:40,049 INFO  [mqtt-spy [ConnectionRunnable for yuri154811932@127.0.0.1]] [MqttAsyncConnectionRunnable   ]  - Connecting client ID [yuri154811932] to server [[tcp://127.0.0.1]]; options = 
+============== Connection options ==============
+CleanSession                :  true
+SocketFactory               :  null
+MqttVersion                 :  0
+KeepAliveInterval           :  60
+ConTimeout                  :  30
+UserName                    :  null
+SSLProperties               :  null
+WillDestination             :  null
+==========================================
+
+2024-01-12 15:50:40,106 INFO  [MQTT Call: yuri154811932      ] [MqttConnectionResultHandler   ]  - yuri154811932@127.0.0.1 connected
+2024-01-12 15:50:40,108 INFO  [JavaFX Application Thread     ] [MqttEventHandler              ]  - About to resubscribe to all requested topics
+2024-01-12 15:50:47,926 INFO  [JavaFX Application Thread     ] [MqttConnectionWithReconnection]  - Disconnecting yuri154811932 from [tcp://127.0.0.1]
+2024-01-12 15:50:47,941 INFO  [MQTT Disc: yuri154811932      ] [MqttDisconnectionResultHandler]  - yuri154811932@127.0.0.1 disconnected
+2024-01-12 19:11:59,988 INFO  [JavaFX Application Thread     ] [MqttConfigurationUtils        ]  - Auto-complete for server URI (127.0.0.1 -> tcp://127.0.0.1)
+2024-01-12 19:12:00,661 INFO  [mqtt-spy [ConnectionRunnable for yuri154811932@127.0.0.1]] [MqttAsyncConnectionRunnable   ]  - Connecting client ID [yuri154811932] to server [[tcp://127.0.0.1]]; options = 
+============== Connection options ==============
+CleanSession                :  true
+SocketFactory               :  null
+MqttVersion                 :  0
+KeepAliveInterval           :  60
+ConTimeout                  :  30
+UserName                    :  null
+SSLProperties               :  null
+WillDestination             :  null
+==========================================
+
+2024-01-12 19:12:00,681 INFO  [MQTT Call: yuri154811932      ] [MqttConnectionResultHandler   ]  - yuri154811932@127.0.0.1 connected
+2024-01-12 19:12:00,681 INFO  [JavaFX Application Thread     ] [MqttEventHandler              ]  - About to resubscribe to all requested topics
+2024-01-12 19:12:08,960 INFO  [JavaFX Application Thread     ] [EditConnectionsController     ]  - Selecting first item...
+2024-01-12 19:13:04,894 INFO  [JavaFX Application Thread     ] [NewPublicationController      ]  - Converted Good by to R29vZCBieQ==
+2024-01-12 19:13:06,475 INFO  [JavaFX Application Thread     ] [NewPublicationController      ]  - Converted R29vZCBieQ== to 476f6f64206279
+2024-01-12 19:13:07,692 INFO  [JavaFX Application Thread     ] [NewPublicationController      ]  - Converted 476f6f64206279 to Good by
+2024-01-12 19:45:50,198 INFO  [JavaFX Application Thread     ] [MqttConnectionWithReconnection]  - Disconnecting yuri154811932 from [tcp://127.0.0.1]
+2024-01-12 19:45:50,228 INFO  [MQTT Disc: yuri154811932      ] [MqttDisconnectionResultHandler]  - yuri154811932@127.0.0.1 disconnected
+2024-01-12 19:46:08,102 INFO  [JavaFX Application Thread     ] [MqttConfigurationUtils        ]  - Auto-complete for server URI (127.0.0.1 -> tcp://127.0.0.1)
+2024-01-12 19:46:08,796 INFO  [mqtt-spy [ConnectionRunnable for yuri154811932@127.0.0.1]] [MqttAsyncConnectionRunnable   ]  - Connecting client ID [yuri154811932] to server [[tcp://127.0.0.1]]; options = 
+============== Connection options ==============
+CleanSession                :  true
+SocketFactory               :  null
+MqttVersion                 :  0
+KeepAliveInterval           :  60
+ConTimeout                  :  30
+UserName                    :  null
+SSLProperties               :  null
+WillDestination             :  null
+==========================================
+
+2024-01-12 19:46:08,805 INFO  [MQTT Call: yuri154811932      ] [MqttConnectionResultHandler   ]  - yuri154811932@127.0.0.1 connected
+2024-01-12 19:46:08,806 INFO  [JavaFX Application Thread     ] [MqttEventHandler              ]  - About to resubscribe to all requested topics
+2024-01-12 19:46:23,018 INFO  [JavaFX Application Thread     ] [MqttConnectionWithReconnection]  - Disconnecting yuri154811932 from [tcp://127.0.0.1]
+2024-01-12 19:46:23,028 INFO  [MQTT Disc: yuri154811932      ] [MqttDisconnectionResultHandler]  - yuri154811932@127.0.0.1 disconnected
+2024-01-12 19:46:26,736 INFO  [JavaFX Application Thread     ] [MqttConfigurationUtils        ]  - Auto-complete for server URI (127.0.0.1 -> tcp://127.0.0.1)
+2024-01-12 19:46:26,899 INFO  [JavaFX Application Thread     ] [NewSubscriptionController     ]  - Subscribing to /mqtt-spy/test/
+2024-01-12 19:46:26,900 INFO  [JavaFX Application Thread     ] [MqttSubscriptionViewManager   ]  - Creating subscription for /mqtt-spy/test/
+2024-01-12 19:46:27,400 INFO  [mqtt-spy [ConnectionRunnable for mqtt-spy@localhost]] [MqttAsyncConnectionRunnable   ]  - Connecting client ID [mqtt-spy] to server [[tcp://127.0.0.1]]; options = 
+============== Connection options ==============
+CleanSession                :  true
+SocketFactory               :  null
+MqttVersion                 :  0
+KeepAliveInterval           :  70
+ConTimeout                  :  30
+UserName                    :  null
+SSLProperties               :  null
+WillDestination             :  null
+==========================================
+
+2024-01-12 19:46:27,411 INFO  [MQTT Call: mqtt-spy           ] [MqttConnectionResultHandler   ]  - mqtt-spy@localhost connected
+2024-01-12 19:46:27,467 INFO  [JavaFX Application Thread     ] [MqttEventHandler              ]  - About to resubscribe to all requested topics
+2024-01-12 19:46:59,123 INFO  [JavaFX Application Thread     ] [NewSubscriptionController     ]  - Subscribing to labs/paho-example-topic-2
+2024-01-12 19:46:59,124 INFO  [JavaFX Application Thread     ] [MqttSubscriptionViewManager   ]  - Creating subscription for labs/paho-example-topic-2
+2024-01-12 19:46:59,208 INFO  [JavaFX Application Thread     ] [BaseMqttConnection            ]  - Subscribed to labs/paho-example-topic-2
+2024-01-12 19:52:00,511 INFO  [JavaFX Application Thread     ] [NewSubscriptionController     ]  - Subscribing to labs/paho-example-topic
+2024-01-12 19:52:00,512 INFO  [JavaFX Application Thread     ] [MqttSubscriptionViewManager   ]  - Creating subscription for labs/paho-example-topic
+2024-01-12 19:52:00,627 INFO  [JavaFX Application Thread     ] [BaseMqttConnection            ]  - Subscribed to labs/paho-example-topic
+2024-01-12 19:53:03,675 WARN  [JavaFX Application Thread     ] [FilteredMessageStore          ]  - Recreating store for topics in labs/paho-example-topic
+2024-01-13 17:57:38,436 INFO  [JavaFX Application Thread     ] [MqttViewManager               ]  - Default configuration file present (/home/yuri/mqtt-spy/mqtt-spy-configuration.xml) = true
+2024-01-13 17:57:38,449 INFO  [JavaFX Application Thread     ] [MqttViewManager               ]  - Loading configuration file from /home/yuri/mqtt-spy/mqtt-spy-configuration.xml
+2024-01-13 17:57:46,143 INFO  [JavaFX Application Thread     ] [MqttViewManager               ]  - Default configuration file present (/home/yuri/mqtt-spy/mqtt-spy-configuration.xml) = true
+2024-01-13 17:57:46,154 INFO  [JavaFX Application Thread     ] [MqttViewManager               ]  - Loading configuration file from /home/yuri/mqtt-spy/mqtt-spy-configuration.xml
+2024-01-13 17:57:49,750 INFO  [JavaFX Application Thread     ] [EditConnectionsController     ]  - Selecting first item...
+2024-01-13 17:57:50,878 ERROR [JavaFX Application Thread     ] [ControlPanelController        ]  - Cannot retrieve version info
+pl.baczkowicz.spy.exceptions.XMLException: Cannot read version info from http://baczkowicz.pl/mqtt-spy/version_0_6_0.xml?current=1.0.0-3
+	at pl.baczkowicz.spy.ui.versions.VersionManager.loadVersions(VersionManager.java:102)
+	at pl.baczkowicz.spy.ui.controllers.ControlPanelController$2.run(ControlPanelController.java:203)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.net.UnknownHostException: baczkowicz.pl
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:196)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at java.net.Socket.connect(Socket.java:555)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:180)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:499)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:594)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:278)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:375)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:393)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1240)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1167)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1061)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:995)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1584)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1512)
+	at java.net.URL.openStream(URL.java:1092)
+	at pl.baczkowicz.spy.ui.versions.VersionManager.loadVersions(VersionManager.java:94)
+	... 2 more
+2024-01-13 17:57:53,607 INFO  [JavaFX Application Thread     ] [MqttConfigurationUtils        ]  - Auto-complete for server URI (127.0.0.1 -> tcp://127.0.0.1)
+2024-01-13 17:57:54,111 INFO  [JavaFX Application Thread     ] [NewSubscriptionController     ]  - Subscribing to /mqtt-spy/test/
+2024-01-13 17:57:54,111 INFO  [JavaFX Application Thread     ] [MqttSubscriptionViewManager   ]  - Creating subscription for /mqtt-spy/test/
+2024-01-13 17:57:54,612 INFO  [mqtt-spy [ConnectionRunnable for mqtt-spy@localhost]] [MqttAsyncConnectionRunnable   ]  - Connecting client ID [mqtt-spy] to server [[tcp://127.0.0.1]]; options = 
+============== Connection options ==============
+CleanSession                :  true
+SocketFactory               :  null
+MqttVersion                 :  0
+KeepAliveInterval           :  70
+ConTimeout                  :  30
+UserName                    :  null
+SSLProperties               :  null
+WillDestination             :  null
+==========================================
+
+2024-01-13 17:57:54,686 INFO  [MQTT Call: mqtt-spy           ] [MqttConnectionResultHandler   ]  - mqtt-spy@localhost connected
+2024-01-13 17:57:54,687 INFO  [JavaFX Application Thread     ] [MqttEventHandler              ]  - About to resubscribe to all requested topics
+2024-01-13 18:29:57,387 INFO  [JavaFX Application Thread     ] [EditMqttConnectionController  ]  - Opening connection yuri182917331@127.0.0.1/9001
+2024-01-13 18:29:57,411 INFO  [JavaFX Application Thread     ] [MqttConfigurationUtils        ]  - Auto-complete for server URI (127.0.0.1/9001 -> tcp://127.0.0.1/9001)
+2024-01-13 18:29:57,529 ERROR [JavaFX Application Thread     ] [MqttConnectionViewManager     ]  - Cannot instantiate the MQTT client
+pl.baczkowicz.spy.exceptions.SpyException: Cannot instantiate the MQTT client
+	at pl.baczkowicz.mqttspy.connectivity.BaseMqttConnection.createClient(BaseMqttConnection.java:122)
+	at pl.baczkowicz.mqttspy.connectivity.MqttConnectionWithReconnection.connect(MqttConnectionWithReconnection.java:67)
+	at pl.baczkowicz.mqttspy.ui.MqttConnectionViewManager.connectToBroker(MqttConnectionViewManager.java:334)
+	at pl.baczkowicz.mqttspy.ui.MqttViewManager$1.run(MqttViewManager.java:352)
+	at com.sun.javafx.application.PlatformImpl.lambda$null$5(PlatformImpl.java:295)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$6(PlatformImpl.java:294)
+	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95)
+	at com.sun.glass.ui.gtk.GtkApplication._runLoop(Native Method)
+	at com.sun.glass.ui.gtk.GtkApplication.lambda$null$10(GtkApplication.java:245)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.lang.IllegalArgumentException: tcp://127.0.0.1/9001
+	at org.eclipse.paho.client.mqttv3.MqttConnectOptions.validateURI(MqttConnectOptions.java:497)
+	at org.eclipse.paho.client.mqttv3.MqttAsyncClient.<init>(MqttAsyncClient.java:291)
+	at org.eclipse.paho.client.mqttv3.MqttAsyncClient.<init>(MqttAsyncClient.java:185)
+	at pl.baczkowicz.mqttspy.connectivity.BaseMqttConnection.createClient(BaseMqttConnection.java:114)
+	... 10 more
+2024-01-13 18:30:11,335 ERROR [JavaFX Application Thread     ] [MqttConnectionViewManager     ]  - Cannot instantiate the MQTT client
+pl.baczkowicz.spy.exceptions.SpyException: Cannot instantiate the MQTT client
+	at pl.baczkowicz.mqttspy.connectivity.BaseMqttConnection.createClient(BaseMqttConnection.java:122)
+	at pl.baczkowicz.mqttspy.connectivity.MqttConnectionWithReconnection.connect(MqttConnectionWithReconnection.java:67)
+	at pl.baczkowicz.mqttspy.ui.MqttConnectionViewManager.connectToBroker(MqttConnectionViewManager.java:334)
+	at pl.baczkowicz.mqttspy.ui.MqttConnectionViewManager$5.handle(MqttConnectionViewManager.java:553)
+	at pl.baczkowicz.mqttspy.ui.MqttConnectionViewManager$5.handle(MqttConnectionViewManager.java:550)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:238)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.scene.control.MenuItem.fire(MenuItem.java:462)
+	at com.sun.javafx.scene.control.skin.ContextMenuContent$MenuItemContainer.doSelect(ContextMenuContent.java:1405)
+	at com.sun.javafx.scene.control.skin.ContextMenuContent$MenuItemContainer.lambda$createChildren$6(ContextMenuContent.java:1358)
+	at com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:218)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:238)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.scene.Scene$MouseHandler.process(Scene.java:3760)
+	at javafx.scene.Scene$MouseHandler.access$1500(Scene.java:3488)
+	at javafx.scene.Scene.impl_processMouseEvent(Scene.java:1765)
+	at javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2497)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:397)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:295)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:434)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:411)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:433)
+	at com.sun.glass.ui.View.handleMouseEvent(View.java:555)
+	at com.sun.glass.ui.View.notifyMouse(View.java:941)
+	at com.sun.glass.ui.gtk.GtkApplication._runLoop(Native Method)
+	at com.sun.glass.ui.gtk.GtkApplication.lambda$null$10(GtkApplication.java:245)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.lang.IllegalArgumentException: tcp://127.0.0.1/9001
+	at org.eclipse.paho.client.mqttv3.MqttConnectOptions.validateURI(MqttConnectOptions.java:497)
+	at org.eclipse.paho.client.mqttv3.MqttAsyncClient.<init>(MqttAsyncClient.java:291)
+	at org.eclipse.paho.client.mqttv3.MqttAsyncClient.<init>(MqttAsyncClient.java:185)
+	at pl.baczkowicz.mqttspy.connectivity.BaseMqttConnection.createClient(BaseMqttConnection.java:114)
+	... 46 more
+2024-01-13 18:30:44,084 INFO  [JavaFX Application Thread     ] [MqttConnectionWithReconnection]  - Disconnecting yuri182917331 from [tcp://127.0.0.1/9001]
+2024-01-13 18:30:44,087 INFO  [JavaFX Application Thread     ] [EditMqttConnectionController  ]  - Opening connection yuri182917331@127.0.0.1
+2024-01-13 18:30:44,098 INFO  [JavaFX Application Thread     ] [MqttConfigurationUtils        ]  - Auto-complete for server URI (127.0.0.1 -> ws://127.0.0.1)
+2024-01-13 18:30:44,691 INFO  [mqtt-spy [ConnectionRunnable for yuri182917331@127.0.0.1]] [MqttAsyncConnectionRunnable   ]  - Connecting client ID [yuri182917331] to server [[ws://127.0.0.1]]; options = 
+============== Connection options ==============
+CleanSession                :  true
+SocketFactory               :  null
+MqttVersion                 :  0
+KeepAliveInterval           :  60
+ConTimeout                  :  30
+UserName                    :  null
+SSLProperties               :  null
+WillDestination             :  null
+==========================================
+
+2024-01-13 18:30:44,697 WARN  [MQTT Con: yuri182917331       ] [MqttConnectionResultHandler   ]  - Connecting to yuri182917331@127.0.0.1 failed
+Não é possível se conectar ao servidor (32103) - java.net.ConnectException: Conexão recusada (Connection refused)
+	at org.eclipse.paho.client.mqttv3.internal.TCPNetworkModule.start(TCPNetworkModule.java:79)
+	at org.eclipse.paho.client.mqttv3.internal.websocket.WebSocketNetworkModule.start(WebSocketNetworkModule.java:76)
+	at org.eclipse.paho.client.mqttv3.internal.ClientComms$ConnectBG.run(ClientComms.java:650)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.net.ConnectException: Conexão recusada (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at org.eclipse.paho.client.mqttv3.internal.TCPNetworkModule.start(TCPNetworkModule.java:70)
+	... 3 more
+2024-01-13 18:30:50,129 INFO  [mqtt-spy [ConnectionRunnable for yuri182917331@127.0.0.1]] [MqttAsyncConnectionRunnable   ]  - Connecting client ID [yuri182917331] to server [[ws://127.0.0.1]]; options = 
+============== Connection options ==============
+CleanSession                :  true
+SocketFactory               :  null
+MqttVersion                 :  0
+KeepAliveInterval           :  60
+ConTimeout                  :  30
+UserName                    :  null
+SSLProperties               :  null
+WillDestination             :  null
+==========================================
+
+2024-01-13 18:30:50,131 WARN  [MQTT Con: yuri182917331       ] [MqttConnectionResultHandler   ]  - Connecting to yuri182917331@127.0.0.1 failed
+Não é possível se conectar ao servidor (32103) - java.net.ConnectException: Conexão recusada (Connection refused)
+	at org.eclipse.paho.client.mqttv3.internal.TCPNetworkModule.start(TCPNetworkModule.java:79)
+	at org.eclipse.paho.client.mqttv3.internal.websocket.WebSocketNetworkModule.start(WebSocketNetworkModule.java:76)
+	at org.eclipse.paho.client.mqttv3.internal.ClientComms$ConnectBG.run(ClientComms.java:650)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.net.ConnectException: Conexão recusada (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at org.eclipse.paho.client.mqttv3.internal.TCPNetworkModule.start(TCPNetworkModule.java:70)
+	... 3 more
+2024-01-13 18:33:45,434 ERROR [MQTT Rec: mqtt-spy            ] [MqttCallbackHandler           ]  - Connection mqtt-spy@localhost lost
+Conexão perdida (32109) - java.net.SocketException: Connection reset
+	at org.eclipse.paho.client.mqttv3.internal.CommsReceiver.run(CommsReceiver.java:146)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:210)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.net.SocketInputStream.read(SocketInputStream.java:224)
+	at java.io.DataInputStream.readByte(DataInputStream.java:265)
+	at org.eclipse.paho.client.mqttv3.internal.wire.MqttInputStream.readMqttWireMessage(MqttInputStream.java:65)
+	at org.eclipse.paho.client.mqttv3.internal.CommsReceiver.run(CommsReceiver.java:107)
+	... 1 more
+2024-01-13 18:35:45,537 INFO  [mqtt-spy [ConnectionRunnable for mqtt-spy@localhost]] [MqttAsyncConnectionRunnable   ]  - Connecting client ID [mqtt-spy] to server [[tcp://127.0.0.1]]; options = 
+============== Connection options ==============
+CleanSession                :  true
+SocketFactory               :  null
+MqttVersion                 :  0
+KeepAliveInterval           :  70
+ConTimeout                  :  30
+UserName                    :  null
+SSLProperties               :  null
+WillDestination             :  null
+==========================================
+
+2024-01-13 18:35:45,538 WARN  [MQTT Con: mqtt-spy            ] [MqttConnectionResultHandler   ]  - Connecting to mqtt-spy@localhost failed
+Não é possível se conectar ao servidor (32103) - java.net.ConnectException: Conexão recusada (Connection refused)
+	at org.eclipse.paho.client.mqttv3.internal.TCPNetworkModule.start(TCPNetworkModule.java:79)
+	at org.eclipse.paho.client.mqttv3.internal.ClientComms$ConnectBG.run(ClientComms.java:650)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.net.ConnectException: Conexão recusada (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at org.eclipse.paho.client.mqttv3.internal.TCPNetworkModule.start(TCPNetworkModule.java:70)
+	... 2 more
+2024-01-13 18:37:16,289 INFO  [JavaFX Application Thread     ] [MqttConnectionWithReconnection]  - Disconnecting yuri182917331 from [ws://127.0.0.1]
+2024-01-13 18:37:18,795 INFO  [JavaFX Application Thread     ] [MqttConnectionWithReconnection]  - Disconnecting mqtt-spy from [tcp://127.0.0.1]
+2024-01-13 18:41:50,267 INFO  [JavaFX Application Thread     ] [MqttConfigurationUtils        ]  - Auto-complete for server URI (127.0.0.1 -> tcp://127.0.0.1)
+2024-01-13 18:41:50,865 INFO  [mqtt-spy [ConnectionRunnable for yuri154811932@127.0.0.1]] [MqttAsyncConnectionRunnable   ]  - Connecting client ID [yuri154811932] to server [[tcp://127.0.0.1]]; options = 
+============== Connection options ==============
+CleanSession                :  true
+SocketFactory               :  null
+MqttVersion                 :  0
+KeepAliveInterval           :  60
+ConTimeout                  :  30
+UserName                    :  null
+SSLProperties               :  null
+WillDestination             :  null
+==========================================
+
+2024-01-13 18:41:50,873 INFO  [MQTT Call: yuri154811932      ] [MqttConnectionResultHandler   ]  - yuri154811932@127.0.0.1 connected
+2024-01-13 18:41:50,873 INFO  [JavaFX Application Thread     ] [MqttEventHandler              ]  - About to resubscribe to all requested topics
+2024-01-13 18:42:10,833 INFO  [JavaFX Application Thread     ] [EditMqttConnectionController  ]  - Opening connection yuri182917331@127.0.0.1
+2024-01-13 18:42:10,855 INFO  [JavaFX Application Thread     ] [MqttConfigurationUtils        ]  - Auto-complete for server URI (127.0.0.1 -> ws://127.0.0.1)
+2024-01-13 18:42:11,455 INFO  [mqtt-spy [ConnectionRunnable for yuri182917331@127.0.0.1]] [MqttAsyncConnectionRunnable   ]  - Connecting client ID [yuri182917331] to server [[ws://127.0.0.1]]; options = 
+============== Connection options ==============
+CleanSession                :  true
+SocketFactory               :  null
+MqttVersion                 :  0
+KeepAliveInterval           :  60
+ConTimeout                  :  30
+UserName                    :  null
+SSLProperties               :  null
+WillDestination             :  null
+==========================================
+
+2024-01-13 18:42:11,457 WARN  [MQTT Con: yuri182917331       ] [MqttConnectionResultHandler   ]  - Connecting to yuri182917331@127.0.0.1 failed
+Não é possível se conectar ao servidor (32103) - java.net.ConnectException: Conexão recusada (Connection refused)
+	at org.eclipse.paho.client.mqttv3.internal.TCPNetworkModule.start(TCPNetworkModule.java:79)
+	at org.eclipse.paho.client.mqttv3.internal.websocket.WebSocketNetworkModule.start(WebSocketNetworkModule.java:76)
+	at org.eclipse.paho.client.mqttv3.internal.ClientComms$ConnectBG.run(ClientComms.java:650)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.net.ConnectException: Conexão recusada (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at org.eclipse.paho.client.mqttv3.internal.TCPNetworkModule.start(TCPNetworkModule.java:70)
+	... 3 more
+2024-01-13 18:42:56,906 INFO  [JavaFX Application Thread     ] [MqttConnectionWithReconnection]  - Disconnecting yuri182917331 from [ws://127.0.0.1]
+2024-01-13 18:42:56,910 INFO  [JavaFX Application Thread     ] [EditMqttConnectionController  ]  - Opening connection yuri182917331@localhost
+2024-01-13 18:42:56,949 INFO  [JavaFX Application Thread     ] [MqttConfigurationUtils        ]  - Auto-complete for server URI (localhost -> ws://localhost)
+2024-01-13 18:42:57,537 INFO  [mqtt-spy [ConnectionRunnable for yuri182917331@localhost]] [MqttAsyncConnectionRunnable   ]  - Connecting client ID [yuri182917331] to server [[ws://localhost]]; options = 
+============== Connection options ==============
+CleanSession                :  true
+SocketFactory               :  null
+MqttVersion                 :  0
+KeepAliveInterval           :  60
+ConTimeout                  :  30
+UserName                    :  null
+SSLProperties               :  null
+WillDestination             :  null
+==========================================
+
+2024-01-13 18:42:57,539 WARN  [MQTT Con: yuri182917331       ] [MqttConnectionResultHandler   ]  - Connecting to yuri182917331@localhost failed
+Não é possível se conectar ao servidor (32103) - java.net.ConnectException: Conexão recusada (Connection refused)
+	at org.eclipse.paho.client.mqttv3.internal.TCPNetworkModule.start(TCPNetworkModule.java:79)
+	at org.eclipse.paho.client.mqttv3.internal.websocket.WebSocketNetworkModule.start(WebSocketNetworkModule.java:76)
+	at org.eclipse.paho.client.mqttv3.internal.ClientComms$ConnectBG.run(ClientComms.java:650)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.net.ConnectException: Conexão recusada (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at org.eclipse.paho.client.mqttv3.internal.TCPNetworkModule.start(TCPNetworkModule.java:70)
+	... 3 more
+2024-01-13 18:43:07,885 INFO  [JavaFX Application Thread     ] [EditConnectionsController     ]  - Selecting first item...
+2024-01-13 18:43:19,372 INFO  [JavaFX Application Thread     ] [EditMqttConnectionController  ]  - Opening connection mqtt-spy@localhost
+2024-01-13 18:43:19,404 INFO  [JavaFX Application Thread     ] [MqttConfigurationUtils        ]  - Auto-complete for server URI (127.0.0.1 -> ws://127.0.0.1)
+2024-01-13 18:43:19,494 INFO  [JavaFX Application Thread     ] [NewSubscriptionController     ]  - Subscribing to /mqtt-spy/test/
+2024-01-13 18:43:19,495 INFO  [JavaFX Application Thread     ] [MqttSubscriptionViewManager   ]  - Creating subscription for /mqtt-spy/test/
+2024-01-13 18:43:19,995 INFO  [mqtt-spy [ConnectionRunnable for mqtt-spy@localhost]] [MqttAsyncConnectionRunnable   ]  - Connecting client ID [mqtt-spy] to server [[ws://127.0.0.1]]; options = 
+============== Connection options ==============
+CleanSession                :  true
+SocketFactory               :  null
+MqttVersion                 :  0
+KeepAliveInterval           :  70
+ConTimeout                  :  30
+UserName                    :  null
+SSLProperties               :  null
+WillDestination             :  null
+==========================================
+
+2024-01-13 18:43:19,997 WARN  [MQTT Con: mqtt-spy            ] [MqttConnectionResultHandler   ]  - Connecting to mqtt-spy@localhost failed
+Não é possível se conectar ao servidor (32103) - java.net.ConnectException: Conexão recusada (Connection refused)
+	at org.eclipse.paho.client.mqttv3.internal.TCPNetworkModule.start(TCPNetworkModule.java:79)
+	at org.eclipse.paho.client.mqttv3.internal.websocket.WebSocketNetworkModule.start(WebSocketNetworkModule.java:76)
+	at org.eclipse.paho.client.mqttv3.internal.ClientComms$ConnectBG.run(ClientComms.java:650)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.net.ConnectException: Conexão recusada (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at org.eclipse.paho.client.mqttv3.internal.TCPNetworkModule.start(TCPNetworkModule.java:70)
+	... 3 more
+2024-01-13 18:43:22,513 INFO  [JavaFX Application Thread     ] [MqttConnectionWithReconnection]  - Disconnecting yuri182917331 from [ws://localhost]
+2024-01-13 18:43:33,090 INFO  [JavaFX Application Thread     ] [MqttConnectionWithReconnection]  - Disconnecting mqtt-spy from [ws://127.0.0.1]
+2024-01-13 18:43:33,096 INFO  [JavaFX Application Thread     ] [EditMqttConnectionController  ]  - Opening connection mqtt-spy@localhost
+2024-01-13 18:43:33,134 INFO  [JavaFX Application Thread     ] [MqttConfigurationUtils        ]  - Auto-complete for server URI (127.0.0.1 -> tcp://127.0.0.1)
+2024-01-13 18:43:33,257 INFO  [JavaFX Application Thread     ] [NewSubscriptionController     ]  - Subscribing to /mqtt-spy/test/
+2024-01-13 18:43:33,257 INFO  [JavaFX Application Thread     ] [MqttSubscriptionViewManager   ]  - Creating subscription for /mqtt-spy/test/
+2024-01-13 18:43:33,757 INFO  [mqtt-spy [ConnectionRunnable for mqtt-spy@localhost]] [MqttAsyncConnectionRunnable   ]  - Connecting client ID [mqtt-spy] to server [[tcp://127.0.0.1]]; options = 
+============== Connection options ==============
+CleanSession                :  true
+SocketFactory               :  null
+MqttVersion                 :  0
+KeepAliveInterval           :  70
+ConTimeout                  :  30
+UserName                    :  null
+SSLProperties               :  null
+WillDestination             :  null
+==========================================
+
+2024-01-13 18:43:33,771 INFO  [MQTT Call: mqtt-spy           ] [MqttConnectionResultHandler   ]  - mqtt-spy@localhost connected
+2024-01-13 18:43:33,771 INFO  [JavaFX Application Thread     ] [MqttEventHandler              ]  - About to resubscribe to all requested topics
+2024-01-13 18:43:36,908 INFO  [JavaFX Application Thread     ] [MqttConnectionWithReconnection]  - Disconnecting mqtt-spy from [tcp://127.0.0.1]
+2024-01-13 18:43:36,920 INFO  [MQTT Disc: mqtt-spy           ] [MqttDisconnectionResultHandler]  - mqtt-spy@localhost disconnected
+2024-01-13 18:43:38,774 INFO  [JavaFX Application Thread     ] [MqttConnectionWithReconnection]  - Disconnecting yuri154811932 from [tcp://127.0.0.1]
+2024-01-13 18:43:38,777 INFO  [MQTT Disc: yuri154811932      ] [MqttDisconnectionResultHandler]  - yuri154811932@127.0.0.1 disconnected
+2024-01-14 19:54:21,846 INFO  [JavaFX Application Thread     ] [MqttViewManager               ]  - Default configuration file present (/home/yuri/mqtt-spy/mqtt-spy-configuration.xml) = true
+2024-01-14 19:54:21,860 INFO  [JavaFX Application Thread     ] [MqttViewManager               ]  - Loading configuration file from /home/yuri/mqtt-spy/mqtt-spy-configuration.xml
+2024-01-14 19:54:24,444 INFO  [JavaFX Application Thread     ] [MqttConfigurationUtils        ]  - Auto-complete for server URI (127.0.0.1 -> tcp://127.0.0.1)
+2024-01-14 19:54:25,031 INFO  [JavaFX Application Thread     ] [NewSubscriptionController     ]  - Subscribing to /mqtt-spy/test/
+2024-01-14 19:54:25,032 INFO  [JavaFX Application Thread     ] [MqttSubscriptionViewManager   ]  - Creating subscription for /mqtt-spy/test/
+2024-01-14 19:54:25,532 INFO  [mqtt-spy [ConnectionRunnable for mqtt-spy@localhost]] [MqttAsyncConnectionRunnable   ]  - Connecting client ID [mqtt-spy] to server [[tcp://127.0.0.1]]; options = 
+============== Connection options ==============
+CleanSession                :  true
+SocketFactory               :  null
+MqttVersion                 :  0
+KeepAliveInterval           :  70
+ConTimeout                  :  30
+UserName                    :  null
+SSLProperties               :  null
+WillDestination             :  null
+==========================================
+
+2024-01-14 19:54:25,670 INFO  [MQTT Call: mqtt-spy           ] [MqttConnectionResultHandler   ]  - mqtt-spy@localhost connected
+2024-01-14 19:54:25,711 INFO  [JavaFX Application Thread     ] [MqttEventHandler              ]  - About to resubscribe to all requested topics
+2024-01-14 19:54:26,589 ERROR [JavaFX Application Thread     ] [ControlPanelController        ]  - Cannot retrieve version info
+pl.baczkowicz.spy.exceptions.XMLException: Cannot read version info from http://baczkowicz.pl/mqtt-spy/version_0_6_0.xml?current=1.0.0-3
+	at pl.baczkowicz.spy.ui.versions.VersionManager.loadVersions(VersionManager.java:102)
+	at pl.baczkowicz.spy.ui.controllers.ControlPanelController$2.run(ControlPanelController.java:203)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.net.UnknownHostException: baczkowicz.pl
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:196)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at java.net.Socket.connect(Socket.java:555)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:180)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:499)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:594)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:278)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:375)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:393)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1240)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1167)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1061)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:995)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1584)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1512)
+	at java.net.URL.openStream(URL.java:1092)
+	at pl.baczkowicz.spy.ui.versions.VersionManager.loadVersions(VersionManager.java:94)
+	... 2 more
+2024-01-14 19:55:09,257 INFO  [JavaFX Application Thread     ] [NewSubscriptionController     ]  - Subscribing to labs/paho-example-topic
+2024-01-14 19:55:09,259 INFO  [JavaFX Application Thread     ] [MqttSubscriptionViewManager   ]  - Creating subscription for labs/paho-example-topic
+2024-01-14 19:55:09,350 INFO  [JavaFX Application Thread     ] [BaseMqttConnection            ]  - Subscribed to labs/paho-example-topic
+2024-01-14 20:51:44,381 INFO  [JavaFX Application Thread     ] [NewSubscriptionController     ]  - Subscribing to a/b
+2024-01-14 20:51:44,390 INFO  [JavaFX Application Thread     ] [MqttSubscriptionViewManager   ]  - Creating subscription for a/b
+2024-01-14 20:51:44,444 INFO  [JavaFX Application Thread     ] [BaseMqttConnection            ]  - Subscribed to a/b
+2024-01-14 20:56:45,468 INFO  [JavaFX Application Thread     ] [NewSubscriptionController     ]  - Subscribing to info
+2024-01-14 20:56:45,469 INFO  [JavaFX Application Thread     ] [MqttSubscriptionViewManager   ]  - Creating subscription for info
+2024-01-14 20:56:45,544 INFO  [JavaFX Application Thread     ] [BaseMqttConnection            ]  - Subscribed to info
+2024-01-15 00:43:47,514 WARN  [JavaFX Application Thread     ] [FilteredMessageStore          ]  - Recreating store for topics in labs/paho-example-topic
+2024-01-15 00:50:58,904 INFO  [JavaFX Application Thread     ] [BaseMqttConnection            ]  - Successfully unsubscribed from a/b
+2024-01-15 00:50:58,905 INFO  [JavaFX Application Thread     ] [BaseMqttConnection            ]  - Successfully unsubscribed from labs/paho-example-topic
+2024-01-15 00:50:58,905 INFO  [JavaFX Application Thread     ] [BaseMqttConnection            ]  - Successfully unsubscribed from info
+2024-01-15 00:50:58,906 INFO  [JavaFX Application Thread     ] [MqttConnectionWithReconnection]  - Disconnecting mqtt-spy from [tcp://127.0.0.1]
